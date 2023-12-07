@@ -1,0 +1,557 @@
+/* Css for dark mode */
+/* Dark mode styles */
+body.dark-mode {
+  transition: ease 0.5s;
+  background-color: #000272; /* Dark mode background color */
+  color: #fff; /* Dark mode text color */
+}
+
+body.dark-mode .card {
+  background-color: #6d1eb2;
+}
+
+.slider.round {
+  background-color: #444; /* Dark mode color for the slider */
+}
+
+.slider.round:before {
+  background-color: #fff; /* Dark mode color for the slider's knob */
+}
+
+/* Toggle button turn to dark mode*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px; /* Width of the outside box */
+  height: 34px; /* Height of the outside box */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #444; /* Dark mode color */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#topButton {
+  /* display: none; */
+
+  /* Set the button position */
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  padding: 10px 10px;
+  border-radius: 200%;
+  border-color: black;
+  cursor: pointer;
+  background-color: #f4bd31;
+}
+
+#topButton:hover {
+  background-color: #ffcd4b;
+  color: #fff;
+  animation: boxShadowColor 1.5s infinite alternate;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  min-width: 150px;
+  max-width: 100%;
+  padding: 1em;
+  border: 0px solid #ddd;
+  border-radius: 8px;
+  background-color: #ddd;
+  margin: 20px;
+  background-color: #7743db;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  animation: boxShadowColor 1.5s infinite alternate;
+}
+
+/* Create some cool color animation when hover the card */
+@keyframes boxShadowColor {
+  20% {
+    box-shadow: 0 0 70px #f4d160;
+  }
+  85% {
+    box-shadow: 0 0 70px #75c2f6;
+  }
+  100% {
+    box-shadow: 0 0 70px #fbeeac;
+  }
+}
+
+.card-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card-title,
+.card-year,
+.card-duration {
+  text-align: center;
+  color: #ddd;
+}
+
+/* Center the Links for the singer social media */
+#selectedArtist {
+  text-align: center;
+  color: #fff;
+}
+
+#selectedArtist a {
+  color: #fff;
+}
+
+.gg-arrow-up {
+  color: #fff3f3;
+}
+#menu {
+  display: flex;
+  justify-content: center;
+}
+.button {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 1.5em;
+  padding: 20px 10px;
+  font-size: 1.5em;
+  margin: 10px;
+  color: #fff;
+  font-weight: 600;
+  background-color: #f4d160;
+}
+
+.button:hover {
+  background-color: #9336b4;
+  color: #fff;
+}
+
+.header1 {
+  font-size: 4em;
+  font-weight: 900;
+}
+
+.beat-box-p {
+  font-size: 1.5em;
+}
+
+/* Ipad screen size */
+@media screen and (max-width: 1180px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    .card-title,
+    .card-year,
+    .card-duration {
+      font-size: 1.5em;
+      margin: 10px;
+    }
+  }
+  .card-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+/* Macbook Pro screen size i guess not really sure */
+@media screen and (min-width: 1181px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust to fit the container */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the grid */
+  }
+  .card-title,
+  .card-year,
+  .card-duration {
+    font-size: 1.5em;
+    margin: 10px;
+  }
+  .card-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 100%;
+    max-width: 350px;
+    padding: 1em;
+    border: 0px solid #ddd;
+    border-radius: 1.5em;
+    background-color: #ddd;
+    margin: 10px;
+    background-color: #7743db;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card:hover {
+    animation: boxShadowColor 1.5s infinite alternate;
+  }
+
+  .card-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0 7em;
+    text-align: center;
+    align-items: center;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 1.5em;
+    padding: 20px 10px;
+    font-size: 1.5em;
+    margin: 10px;
+  }
+
+  .header1 {
+    font-size: 4em;
+    font-weight: 900;
+  }
+
+  .card-title,
+  .card-year,
+  .card-duration {
+    font-size: 1.5em;
+    margin: 5px;
+  }
+
+  .beat-box-p {
+    font-size: 1.5em;
+  }
+
+  .card-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.header1 {
+  font-family: "Dela Gothic One", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Sign up page form */
+
+.newsletterContainer {
+  background-color: #060747;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.newsletterSignup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.emailForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+#email {
+  width: 600px;
+  padding: 25px;
+  margin-right: 10px;
+  border-radius: 4px;
+  background-color: #4e1212;
+}
+
+.subscribeButton {
+  background-color: #f4bd31;
+  cursor: pointer;
+  padding: 25px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+.subscribeButton:hover {
+  background-color: blueviolet;
+  color: #fff;
+}
+
+.newsletterContainer p {
+  text-align: left;
+  padding-right: 20;
+  font-weight: 900;
+}
+
+.newsletterContainer h1 {
+  font-size: 35px;
+  font-weight: 900;
+}
+
+.Requesting {
+  background-color: #512b81;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-bottom: yellow 2px;
+  border-radius: 20px;
+}
+
+.Requesting h1:hover {
+  border-bottom: 5px solid #f4bd31;
+  display: inline-block;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.newsletterSignup p {
+  max-width: 500px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-right: 400px;
+}
+
+.Requesting .subscribeButton {
+  background-color: #7743db;
+}
+
+#email:focus {
+  border: solid 1.5px #f4bd31;
+}
+
+.Requesting button {
+  background-color: #512b81;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-bottom: yellow 2px;
+  border-radius: 20px;
+  font-size: 40px;
+}
+
+/* Submit form button */
+.SubmitFormButton {
+  display: flex;
+}
+
+.SubmitFormButton .submitBtn,
+.SubmitFormButton .resetBtn {
+  background-color: #f4bd31;
+}
+
+.Requesting button:hover {
+  background-color: #f4bd31;
+  transition: ease-in 0.5s;
+  border-bottom: 5px solid #f4bd31;
+}
+
+/* The king of beatbox */
+/* the paragraph below it as well */
+#header1 {
+  display: flex;
+  color: white;
+  text-align: center !important;
+  justify-content: center;
+}
+
+.FormContainer {
+  padding: 20px;
+  background-color: #35155d;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="phone"],
+input[type="url"],
+select {
+  width: 100%;
+  padding: 0.9em 1.2em;
+  margin: 1em 0;
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 0.25em;
+  box-sizing: border-box;
+}
+
+.RequestFormContainer button {
+  background-color: #d9a217;
+  padding: 15px 40px;
+}
+
+.RequestFormContainer button:hover {
+  background-color: #0004fc;
+  color: white;
+}
+
+#artistReason {
+  background-color: #f4bd31;
+}
+
+#artistReason:focus {
+  border: 3px solid #000272;
+  font-size: 16px;
+}
+
+#RequestArtist {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.boldText {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.checkboxLabel {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+/* Check box */
+#explicitLyrics {
+  transform: scale(2); /* Make the check box bigger */
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+#artistreason {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+#submitBtn1 {
+  font-weight: 700;
+}
+
+#resetBtn1 {
+  font-weight: 700;
+}
+
+#backToHome {
+  font-weight: 700;
+}
+
+#addUrl {
+  font-weight: 700;
+}
+#submitBtn1:hover {
+  background-color: #0004fc;
+  color: #fff;
+}
+
+#resetBtn1:hover {
+  background-color: #0004fc;
+  color: #fff;
+}
+
+input::placeholder,
+#artistReason::placeholder {
+  color: #a7a7a7;
+  font-style: italic;
+  font-size: 1.3em;
+}
+
+.fa-music {
+  margin-top: 10px;
+  margin-right: 20px;
+  color: white;
+}
+
+#colorWhite {
+  color: #fff;
+}
+
+.fa-user,
+.fa-calendar,
+.fa-clock,
+.fa-link {
+  margin-right: 20px;
+}

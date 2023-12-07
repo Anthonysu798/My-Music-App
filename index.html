@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+
+    <!-- Change this to your name-->
+    <meta name="author" content="Your Name" />
+
+    <title>WEB222 Music App</title>
+    <!-- Classless CSS Stylesheet - https://watercss.kognise.dev/ -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/water.css" />
+    <link
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/arrow-up.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:ital,wght@0,300;0,500;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:ital,wght@0,300;0,500;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:ital,wght@0,300;0,500;1,100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <label class="switch">
+            <input type="checkbox" id="theme-switch" />
+            <span class="slider round"></span>
+          </label>
+        </ul>
+      </nav>
+      <!-- Change this to your App's info -->
+      <h1 id="header1" class="header1" style="text-align: center; color: #fff">
+        The King of BeatBox
+      </h1>
+      <p class="beat-box-p" style="text-align: center; color: #fff">
+        The king of BeatBox have ton of music you can listen from. Boost your
+        mood, memory, and mind.
+      </p>
+    </header>
+
+    <nav id="menu"></nav>
+    <hr />
+
+    <main>
+      <h2 id="selectedArtist"></h2>
+      <div class="cards-container" id="songs"></div>
+    </main>
+
+    <!-- JavaScript Data Files -->
+    <script src="./js/data.js"></script>
+    <script src="./js/3artists.js"></script>
+    <button onclick="topFunction()" id="topButton" title="Click to back to top">
+      <i class="gg-arrow-up"></i>
+    </button>
+
+    <!-- Create a scroll up button  -->
+    <script>
+      let topbtn = document.getElementById("topButton");
+      function topFunction() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (document.documentElement.scrollTop > 1200) {
+          topbtn.style.display = "block";
+        } else {
+          topbtn.style.display = "none";
+        }
+      }
+    </script>
+    <script>
+      document
+        .getElementById("theme-switch")
+        .addEventListener("change", function () {
+          document.body.classList.toggle("dark-mode", this.checked);
+        });
+    </script>
+    <!-- Main App JavaScript File -->
+    <script src="./js/app.js"></script>
+  </body>
+  <footer>
+    <div class="newsletterContainer">
+      <div class="Requesting">
+        <button
+          id="RequestingArtist"
+          onclick="location.href='signUpForm.html';"
+        >
+          Requesting a New Artist
+        </button>
+      </div>
+      <div class="newsletterSignup">
+        <p>Sign up for our newsletter</p>
+        <form action="https://httpbin.org/post" method="POST" class="emailForm">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit" class="subscribeButton">Subscribe</button>
+        </form>
+        <p
+          style="
+            text-align: center;
+            margin: 0px 0px;
+            color: #fff;
+            font-size: 12px;
+          "
+        >
+          Copy Right© Anthony Su 2023
+        </p>
+      </div>
+    </div>
+  </footer>
+</html>
+
+<!-- Reference
+Central Cee Photos
+
+https://www.thefader.com/2023/02/10/central-cee-you-me By DAVID RENSHAW
+February 10, 2023
+
+https://i.scdn.co/image/ab676161000051745fe7cabb8de1c0266cd2179c From spotify
+
+https://www.rollingstone.com/music/music-features/central-cee-interview-uk-rap-new-mixtape-1347911/?sub_action=logged_in BY JEFF IHAZA MAY 10, 2022
+
+https://www.astralpeople.com/tours/central-cee-announces-still-loading-australian-tour By 2023 Astral People
+
+JJ Lin
+https://milkeninstitute.org/events/a0c1u00000cf2wmuaz/speakers/jj-lin By JJ Lin
+Founder and CEO, JFJ Productions
+
+https://www.nautiljon.com/paroles/jj+lin/dang+ni.html By nautiljon.com
+
+https://musicboard.app/artist/1572610?dz By musicboard.app
+
+https://www.filepicker.io/api/file/wHWDpSV3TDy3lxm7VBQW/convert?cache=true&crop=0%2C394%2C2330%2C928 By bandwagon.asia
+
+Bad Bunny
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Bad_Bunny_2019_by_Glenn_Francis_%28cropped%29.jpg/800px-Bad_Bunny_2019_by_Glenn_Francis_%28cropped%29.jpg By wikipedia.org
+
+https://ew.com/thmb/V4dZhrmQxBlb5bHQgjmgAXI-O54=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Bad-Bunny-091223-2507b91658b74c79b97a1831ff705233.jpg By Devan Coggan
+
+https://www.marca.com/en/lifestyle/music/2023/03/12/640de3bb268e3e39538b4580.html By Actualizado
+
+https://i.guim.co.uk/img/media/1597132319476d2f64b7679b8a3f37fd46694cb9/509_1656_3850_2309/master/3850.jpg?width=1200&quality=85&auto=format&fit=max&s=544c50c6e18a0ea5bd1f719a75ed8f38 By theguardian.com
+
+-->

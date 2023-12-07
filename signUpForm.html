@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+
+    <!-- Change this to your name-->
+    <meta name="author" content="Your Name" />
+
+    <title>WEB222 Music App</title>
+    <!-- Classless CSS Stylesheet - https://watercss.kognise.dev/ -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/water.css" />
+    <link
+      href="https://unpkg.com/css.gg@2.0.0/icons/css/arrow-up.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:ital,wght@0,300;0,500;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:ital,wght@0,300;0,500;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:ital,wght@0,300;0,500;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c79effc83f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="colorWhite">
+    <header>
+      <nav>
+        <ul>
+          <label class="switch">
+            <input type="checkbox" id="theme-switch" />
+            <span class="slider round"></span>
+          </label>
+        </ul>
+      </nav>
+    </header>
+    <!-- Form HTML -->
+    <div class="RequestFormContainer">
+      <a href="index.html" id="header1" class="header1">
+        The King of BeatBox
+      </a>
+      <p id="header1">
+        The king of BeatBox have ton of music you can listen from. Boost your
+        mood, memory, and mind.
+      </p>
+      <div class="FormContainer">
+        <form
+          id="form"
+          class="form"
+          action="https://httpbin.org/post"
+          method="post"
+        >
+          <label id="RequestArtist" for="FormTitle"
+            ><i class="fa-solid fa-music"></i>Request Artist</label
+          >
+          <br />
+          <label for="artist-name" class="boldText"
+            ><i class="fa-solid fa-user"></i>Artist's Name</label
+          >
+          <input
+            type="text"
+            id="artist-name"
+            name="artistName"
+            list="ListOfArtist"
+            placeholder="Example: Central Cee"
+          />
+          <datalist id="ListOfArtist">
+            <option value="Central Cee"></option>
+            <option value="Jie Lin"></option>
+            <option value="Bad Bunny"></option>
+          </datalist>
+
+          <br />
+          <label for="songGenre" class="boldText"
+            ><i class="fa-solid fa-music"></i>Music Genre</label
+          >
+          <input
+            type="text"
+            id="songGenre"
+            name="songGenre"
+            list="genreList"
+            placeholder="Select or type a genre"
+          />
+
+          <!-- Code from lecture class and also the javascript code -->
+          <datalist id="genreList">
+            <option value="Rock"></option>
+            <option value="Pop"></option>
+            <option value="Jazz"></option>
+            <option value="Hip Hop"></option>
+            <option value="Classical"></option>
+            <option value="Country"></option>
+            <option value="Electronic"></option>
+            <option value="Folk"></option>
+            <option value="Reggae"></option>
+            <option value="Blues"></option>
+            <option value="Other"></option>
+          </datalist>
+
+          <input
+            type="text"
+            id="otherGenre"
+            name="otherGenre"
+            placeholder="Specify Genre"
+            style="display: none"
+          />
+
+          <br />
+          <label for="song-year" class="boldText"
+            ><i class="fa-solid fa-calendar"></i>Year</label
+          >
+          <input
+            type="text"
+            id="song-year"
+            name="songYear"
+            placeholder="Example: 2023"
+          />
+
+          <br />
+          <label for="song-duration" class="boldText"
+            ><i class="fa-solid fa-clock"></i>Duration</label
+          >
+          <input
+            type="text"
+            id="song-duration"
+            name="songDuration"
+            placeholder="Example: 03:30 (mm:ss)"
+            maxlength="5"
+          />
+
+          <br />
+          <label for="social-media-url" class="boldText"
+            ><i class="fa-solid fa-link"></i>Social Media URLs</label
+          >
+          <input
+            type="url"
+            id="song-url"
+            name="songURL"
+            placeholder="https://www.youtube.com/"
+          />
+
+          <button type="button" id="addUrl">Add Another URL</button>
+          <br />
+          <br />
+          <label for="explicit-lyrics" class="checkboxLabel"
+            >Contains explicit lyrics</label
+          >
+          <input type="checkbox" id="explicitLyrics" name="explicitLyrics" />
+          <br />
+          <br />
+          <label id="artistreason" for="artistReason"
+            >Why you want to add the artist?</label
+          >
+          <textarea
+            id="artistReason"
+            name="artistReason"
+            placeholder="Why you want to add the artist?"
+            required
+          ></textarea>
+          <div class="SubmitFormButton">
+            <input
+              id="submitBtn1"
+              type="submit"
+              value="Submit Request"
+              class="submitBtn"
+            />
+            <input id="resetBtn1" type="reset" value="Reset" class="resetBtn" />
+          </div>
+
+          <button
+            id="backToHome"
+            type="button"
+            onclick="location.href='index.html';"
+            class="back-btn"
+          >
+            Back to home page
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- JavaScript Data Files -->
+    <script src="./js/data.js"></script>
+    <script src="./js/3artists.js"></script>
+    <button onclick="topFunction()" id="topButton" title="Click to back to top">
+      <i class="gg-arrow-up"></i>
+    </button>
+
+    <!-- Form validation -->
+    <script>
+      document
+        .querySelector("#songGenre")
+        .addEventListener("change", (event) => {
+          let input = document.querySelector("#otherGenre");
+          if (event.target.value === "Other") {
+            input.style.display = "block";
+          } else input.style.display = "none";
+        });
+
+      // Check if year is valid
+      document
+        .getElementById("song-year")
+        .addEventListener("input", (event) => {
+          let value = event.target.value;
+          let newValue = value.replace(/[^0-9]/g, "").substring(0, 4);
+          if (newValue.length > 0 && !["1", "2"].includes(newValue[0])) {
+            newValue = "";
+          }
+          event.target.value = newValue;
+        });
+
+      document
+        .getElementById("song-duration")
+        .addEventListener("input", (event) => {
+          let input = event.target.value;
+          input = input.replace(/[^0-9]/g, "");
+          let newInput = "";
+          for (var i = 0; i < input.length; i++) {
+            newInput += input[i];
+            if (i % 2 === 1 && i !== input.length - 1) {
+              newInput += ":";
+            }
+          }
+          event.target.value = newInput;
+        });
+
+      // Function to dynamically append URL input fields to the form
+      document.addEventListener("DOMContentLoaded", () => {
+        const addUrlButton = document.getElementById("addUrl");
+        addUrlButton.addEventListener("click", () => {
+          // Create a new URL input field when is clicked
+          const urlInput = document.createElement("input");
+          urlInput.setAttribute("type", "url");
+          urlInput.setAttribute("name", "additionalUrl");
+          urlInput.setAttribute("placeholder", "Enter Artist URL here");
+          urlInput.classList.add("dynamic-url-input");
+
+          const form = addUrlButton.closest(".form");
+          form.insertBefore(urlInput, addUrlButton);
+        });
+      });
+    </script>
+
+    <!-- Create a scroll up button  -->
+    <script>
+      let topbtn = document.getElementById("topButton");
+      function topFunction() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (document.documentElement.scrollTop > 1200) {
+          topbtn.style.display = "block";
+        } else {
+          topbtn.style.display = "none";
+        }
+      }
+    </script>
+    <script>
+      document
+        .getElementById("theme-switch")
+        .addEventListener("change", function () {
+          document.body.classList.toggle("dark-mode", this.checked);
+        });
+    </script>
+    <!-- Main App JavaScript File -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
+
+<!-- Reference
+Central Cee Photos
+
+https://www.thefader.com/2023/02/10/central-cee-you-me By DAVID RENSHAW
+February 10, 2023
+
+https://i.scdn.co/image/ab676161000051745fe7cabb8de1c0266cd2179c From spotify
+
+https://www.rollingstone.com/music/music-features/central-cee-interview-uk-rap-new-mixtape-1347911/?sub_action=logged_in BY JEFF IHAZA MAY 10, 2022
+
+https://www.astralpeople.com/tours/central-cee-announces-still-loading-australian-tour By 2023 Astral People
+
+JJ Lin
+https://milkeninstitute.org/events/a0c1u00000cf2wmuaz/speakers/jj-lin By JJ Lin
+Founder and CEO, JFJ Productions
+
+https://www.nautiljon.com/paroles/jj+lin/dang+ni.html By nautiljon.com
+
+https://musicboard.app/artist/1572610?dz By musicboard.app
+
+https://www.filepicker.io/api/file/wHWDpSV3TDy3lxm7VBQW/convert?cache=true&crop=0%2C394%2C2330%2C928 By bandwagon.asia
+
+Bad Bunny
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Bad_Bunny_2019_by_Glenn_Francis_%28cropped%29.jpg/800px-Bad_Bunny_2019_by_Glenn_Francis_%28cropped%29.jpg By wikipedia.org
+
+https://ew.com/thmb/V4dZhrmQxBlb5bHQgjmgAXI-O54=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Bad-Bunny-091223-2507b91658b74c79b97a1831ff705233.jpg By Devan Coggan
+
+https://www.marca.com/en/lifestyle/music/2023/03/12/640de3bb268e3e39538b4580.html By Actualizado
+
+https://i.guim.co.uk/img/media/1597132319476d2f64b7679b8a3f37fd46694cb9/509_1656_3850_2309/master/3850.jpg?width=1200&quality=85&auto=format&fit=max&s=544c50c6e18a0ea5bd1f719a75ed8f38 By theguardian.com
+
+-->
