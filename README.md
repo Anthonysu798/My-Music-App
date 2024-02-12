@@ -1,17 +1,20 @@
-🎵 Music-App
-📚 I have create an Music App Webpage during the learning in WEB222 course at Seneca College
+# 🎵 Music-App<br>
 
-📖 Everything is cited. You can refer at : Seneca Library APA
-# Assignment 5 and 6 Instructions
-✏️️ FEATURES
-NOTE: this assignment combines Assignment 5 and 6 into one, and is 2x the marks.
-🌗 Turn to Dark Mode
-🧑🏻‍💻 Responsive WEB design
-↕️ scroll up to top button
-Introduction
-Language use in the music app
+📚 I have create an Music App Webpage during the learning in WEB222 course at Seneca College<br>
+
+📖 Everything is cited. You can refer at : [Seneca Library APA](https://library.senecapolytechnic.ca/apa)
+
+# ✏️️ FEATURES
+
+* 🌗 Turn to Dark Mode <br>
+* 🧑🏻‍💻 Responsive WEB design <br>
+* ↕️ scroll up to top button
+
+# Language use in the music app
 - 🧑🏻‍💻HTML
 - 🧑🏻‍💻CSS
-- 🧑🏻‍💻Javascript
-Netlify Hosting
-Link to my music app:
+- 🧑🏻‍💻Javascript <br><br>
+# [Netlify Hosting](https://app.netlify.com/)
+Click [here to my music app](https://my-music-app2023.netlify.app/).
+<br>or<br>
+https://my-music-app2023.netlify.app/
