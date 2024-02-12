@@ -334,6 +334,10 @@ input:checked + .slider:before {
   margin-top: 20px;
   width: 100%;
 }
+.newsletterSignup p {
+  text-align: center;
+  font-size: 1000px;
+}
 
 .emailForm {
   display: flex;
@@ -554,4 +558,12 @@ input::placeholder,
 .fa-clock,
 .fa-link {
   margin-right: 20px;
+}
+
+button{
+  border: none;
+}
+
+body {
+  background-color: #6d1eb2;
 }
